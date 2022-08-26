@@ -18,8 +18,44 @@ def template(number):
 Summary: 
 	''' % number
 
+def get_file_addresses():
+	addresses = []
+	folders = os.listdir('.')
+
+	for folder in folders:
+		try:
+			int(folder)
+			print(folder)
+			files = os.listdir(folder)
+			print(files)
+			for file in files:
+				if folder in file:
+					addresses.append(os.path.join(folder, file))
+		except:
+			continue
+	return sorted(addresses)
+
+def extract_summary(file_name):
+	header = '#[%s](%s)'
+	output = ''
+	with open(file_name, 'r') as text:
+		output += header % (text.readline(), file_name)
+		output += text.readline()
+		output += text.readline()
+
+	return output
+def generate_readme():
+	addresses = get_file_addresses()
+	# print(addresses)
+	block_text = ''
+	for project in addresses:
+		block_text += extract_summary(project)
+	readme = open('readme.md', 'w')
+	readme.write(block_text)
+
 def main():
-	make_sub_dirs()
+	# make_sub_dirs()
+	generate_readme()
 
 if __name__ == '__main__':
 	main()
