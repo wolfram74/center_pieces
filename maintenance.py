@@ -36,10 +36,10 @@ def get_file_addresses():
 	return sorted(addresses)
 
 def extract_summary(file_name):
-	header = '#[%s](%s)'
+	header = '# [%s](%s)'
 	output = ''
 	with open(file_name, 'r') as text:
-		output += header % (text.readline(), file_name)
+		output += header % (text.readline().rstrip(), file_name)
 		output += text.readline()
 		output += text.readline()
 
