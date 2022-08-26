@@ -25,9 +25,9 @@ def get_file_addresses():
 	for folder in folders:
 		try:
 			int(folder)
-			print(folder)
+			# print(folder)
 			files = os.listdir(folder)
-			print(files)
+			# print(files)
 			for file in files:
 				if folder in file:
 					addresses.append(os.path.join(folder, file))
@@ -43,7 +43,7 @@ def extract_summary(file_name):
 		output += text.readline()
 		output += text.readline()
 
-	return output
+	return output+'\n'
 def generate_readme():
 	addresses = get_file_addresses()
 	# print(addresses)
