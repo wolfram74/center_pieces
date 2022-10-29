@@ -36,7 +36,7 @@ def get_file_addresses():
 	return sorted(addresses)
 
 def extract_summary(file_name):
-	header = '# [%s](%s)'
+	header = '### [%s](%s)'
 	output = ''
 	with open(file_name, 'r') as text:
 		output += header % (text.readline().rstrip(), file_name)
@@ -59,3 +59,6 @@ def main():
 
 if __name__ == '__main__':
 	main()
+
+	# Periodic bouncing modes for two uniformly magnetized spheres. II. Scaling
+	
