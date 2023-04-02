@@ -55,6 +55,8 @@ Summary: A laser on a swivel mount that can go be aimed at two different pieces 
 ### [19 : Resonating oscillators](19/19.md)
 Summary: pendulums on a shared platform with some give will couple together if they have complimentary frequencies
 
-### [20 :](20/20.md)
-Summary: 
+### [20 : Double Pendulum](20/20.md)
+Summary: One simple pendulum suspended from the bottom of another simple pendulum generates a system that is chaotic at large displacements from equilibrium
 
+### [21 : Static Magnetic Levitation](21/21.md)
+Summary: A toy (plane, boat, action figure what have) has a magnet placed on it's dorsal side and a string attached to its ventral side. An overhanging magnet on a scaffold is positioned so that the string doesn't quite let the two magnets touch, but the strength of the attraction over powers gravity so the toy floats.
